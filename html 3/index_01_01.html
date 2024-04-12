@@ -1,0 +1,129 @@
+<!doctype html>
+<html>
+	<head>
+		<script>
+		    // Funkcja do wczytania pliku XML
+		    function load()
+		    {
+		        var xmlDoc;
+
+		        if (window.XMLHttpRequest)
+		        {
+		            xhttp = new XMLHttpRequest();
+		        } 
+		        else
+		        {
+		            xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+		        }
+
+		        xhttp.onreadystatechange = function()
+		        {
+		            if (this.readyState == 4 && this.status == 200)
+		            {
+		                xmlDoc = this.responseXML;
+		                displayProductInfo(xmlDoc);
+		            }
+		        };
+
+		        xhttp.open("GET", "data_01_02.xml", true);
+		        xhttp.send();
+		    };
+
+		    // Funkcja do wyświetlenia informacji o produktach
+		    function displayProductInfo(xmlDoc)
+		    {
+		        productInfoDiv = document.getElementById("KOSZYK_SKLEPOWY");
+		        productInfoDiv.innerHTML = ""; // Wyczyść zawartość przed wyświetleniem nowych informacji
+
+		        carts = xmlDoc.getElementsByTagName("KOSZYK_INFO");
+
+		        for (i = 0; i < carts.length; i++)
+		        {
+			        cartInfoData = carts[i].getAttribute("data");
+			        cartInfoTime = carts[i].getAttribute("czas_zakupu");
+			        cartInfoName = carts[i].getAttribute("klient");
+			        cartInfoDoubleName = carts[i].getAttribute("dwa_imiona");
+
+			        // Corrected part for deliveryAddress
+			        ordersNotes = carts[i].getElementsByTagName("deliveryAddress");
+					orderStreet = ordersNotes[0].getElementsByTagName("street")[0].textContent;
+					orderCity = ordersNotes[0].getElementsByTagName("city")[0].textContent;
+					orderZip = ordersNotes[0].getElementsByTagName("zipCode")[0].textContent;
+					orderCountry = ordersNotes[0].getElementsByTagName("country")[0].textContent;
+
+			        clientsInfo = carts[i].getElementsByTagName("customerInfo");
+			        clientID = clientsInfo[0].getElementsByTagName("customerID")[0].textContent;
+			        clientEmail = clientsInfo[0].getElementsByTagName("email")[0].textContent;
+			        clientPhone = clientsInfo[0].getElementsByTagName("phone")[0].textContent;
+
+		        	productInfoDiv.innerHTML += "<p><strong>-------------------------------------------;";
+		        	productInfoDiv.innerHTML += "<strong> INFORMACJE DOSTAWY:" + "<br>";
+		        	productInfoDiv.innerHTML += "ulica: " + orderStreet + "<br>";
+		        	productInfoDiv.innerHTML += "miasto: " + orderCity + "<br>";
+		        	productInfoDiv.innerHTML += "kod pocztowy: " + orderZip + "<br>";
+		        	productInfoDiv.innerHTML += "kraj: " + orderCountry + "<br>";
+		        	productInfoDiv.innerHTML += "<em> data zamowienia: " + cartInfoData + "<br>";
+		        	productInfoDiv.innerHTML += "<em> czas zamowienia: " + cartInfoTime + "<br>";
+		        	productInfoDiv.innerHTML += "<strong> informacje klienta: <br>";
+		        	productInfoDiv.innerHTML += "Imie i Nazwisko klienta: " + cartInfoName + "<br>";
+		        	productInfoDiv.innerHTML += "Dwa Imiona? " + cartInfoDoubleName + "<br>";
+		        	productInfoDiv.innerHTML += "ID klienta: " + clientID + "<br>";
+		        	productInfoDiv.innerHTML += "Email: " + clientEmail + "<br>";
+		        	productInfoDiv.innerHTML += "Telefon Kontaktowy: " + clientPhone + "<br>";
+		        	productInfoDiv.innerHTML += "<strong>-------------------------------------------" + "</p>";
+		        	products = carts[i].getElementsByTagName("product");
+			        for (j = 0; j < products.length; j++)
+			        {
+			            productName = products[j].getElementsByTagName("name")[0].childNodes[0].nodeValue;
+			            productBrand = products[j].getElementsByTagName("brand")[0].childNodes[0].nodeValue;
+			            productPrice = products[j].getElementsByTagName("price")[0].childNodes[0].nodeValue;
+			            productDiscount = products[j].getAttribute("przecena");
+			            productQuantity = products[j].getAttribute("ilosc");
+
+			            // Dodaj informacje do kontenera
+			            productInfoDiv.innerHTML += "	<p><strong>" + productName + "</strong> firmy " + productBrand + "<br>";
+			            productInfoDiv.innerHTML += "	Cena: " + productPrice + "zł<br>";
+			            productInfoDiv.innerHTML += "   Przecena: " + productDiscount + "<br>";
+						productInfoDiv.innerHTML += "	Ilość: " + productQuantity + "</p>";
+					}
+				}
+		    };
+		</script>
+	</head>
+<body>
+
+	<table border="1">
+        <tr>
+            <td>NAJLEPSZE PIWA</td>
+            <td>SREDNIE PIWA</td>
+            <td>NAJGORSZE PIWA</td>
+        </tr>
+        <tr>
+            <td>KOZEL</td>
+            <td>CARLSBERG</td>
+            <td>SOMMERSBY</td>
+        </tr>
+        <tr>
+            <td>BOSMAN</td>
+            <td>CORONA</td>
+            <td>ZUBR</td>
+        </tr>
+    </table>
+
+    <button type="button" onclick="load()">JESTEM PRZYCISK</button>
+
+    <div id="xmlDataContainer"></div>
+
+    <input type="text" placeholder="TEKST PISZE">
+
+	<select>
+        <option value="o1">WYBIERZ</option>
+        <option value="o2">JEDNA</option>
+        <option value="o3">OPCJE</option>
+    </select>
+
+    <textarea placeholder="PISZ TEKST"></textarea>
+
+    <div id="KOSZYK_SKLEPOWY"></div>
+</body>
+</html> 

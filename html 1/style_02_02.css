@@ -1,0 +1,14 @@
+table, td {
+	border: 1px solid blue;
+	padding: 0px;
+	background-color: LavenderBlush;
+	margin: 10px 0px 0px 0px;
+	text-align: left;
+	width: auto;
+	vertical-align: baseline;
+	font-weight: default;
+	font-size: 25px;
+}
+.td_day {
+	font-weight: bold;
+}

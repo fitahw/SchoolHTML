@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Szymon Więzowski">
+    <meta name="description" content="Opis strony">
+    <meta name="keywords" content="HTML, jquery, js">
+    <script type="text/javascript" src="jquery-3.7.1.min.js"></script>
+    <script src="script_04_02.js" defer></script>
+
+    <title>SZACHY</title>
+
+    <style>
+        .plansza {
+            display: grid;
+            grid-template-columns: repeat(8, 100px);
+            grid-template-rows: repeat(8, 100px);
+        }
+
+        .plansza div {
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            line-height: 100px;
+        }
+
+        .white {
+            background-color: #c41e3a;
+        }
+
+        .black {
+            background-color: #daa520;
+        }
+    </style>
+</head>
+<body>
+    <div id="plansza" class="plansza"></div>
+</body>
+</html>

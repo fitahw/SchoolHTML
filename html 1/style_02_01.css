@@ -1,0 +1,30 @@
+/* Szymon Więzowski */
+body {
+	background-color:#DEB887;
+}
+.div2 {
+	width:200px;
+	border: 3px solid yellow;
+}
+#span_001 {
+	color: #EC0B09
+}
+.cus_select {
+	width: auto;
+	height: 30px;
+	color: teal;
+	background-color:white;
+	border: 1px solid teal;
+	margin: 0px 0px 0px 0px;
+	padding: 3px;
+}
+.cus_button {
+	width: 150px;
+	height: 30px;
+	text-align: center;
+	color: 	8A2BE2;
+	background-color: #F0F8FF;
+	border: 3px solid brown;
+	margin: 0px 0px 0px 0px;
+	padding: 3px;
+}

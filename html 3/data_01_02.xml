@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE shoppingCart SYSTEM "shoppingCart.dtd">
+<KOSZYK_SKLEPOWY>
+    <KOSZYK_INFO data="2024-01-27" czas_zakupu="15:30" klient="JAN PAWEŁ" dwa_imiona="nie">
+        <KOSZYK_ID id="12345" status="zapłacony" currency="PLN">
+            <product id="p1" przecena="50%" ilosc="1">
+                <name>ZUPKA CHINSKA</name>
+                <brand>KAUFLAND</brand>
+                <price>-.99</price>
+            </product>
+
+            <product id="p2" przecena="0%" ilosc="1">
+                <name>PAPIER TOALETOWY</name>
+                <brand>VELVET</brand>
+                <price>30.49</price>
+            </product>
+
+            <product id="p3" przecena="kuponik" ilosc="3">
+                <name>CHLEB TOSTOWY</name>
+                <brand>AUCHAN</brand>
+                <price>3.99</price>
+            </product>
+
+            <product id="p4" przecena="10%" ilosc="1">
+                <name>MAJONEZ</name>
+                <brand>WINIARY</brand>
+                <price>14.99</price>
+            </product>
+
+            <product id="p5" przecena="0%" ilosc="2">
+                <name>KETCHUP</name>
+                <brand>HEINZ</brand>
+                <price>8.99</price>
+            </product>
+
+            <product id="p6" przecena="99%" ilosc="2">
+                <name>RYZA PAPIERU</name>
+                <brand>AUCHAN</brand>
+                <price>30.99</price>
+            </product>
+
+            <emptyElement></emptyElement>
+        </KOSZYK_ID>
+
+        <KOSZYK_ID id="12345" status="zapłacony" currency="PLN">
+            <product id="p1" przecena="0%" ilosc="1">
+                <name>PASTA DO ZEBOW</name>
+                <brand>COLGATE</brand>
+                <price>7.99</price>
+            </product>
+
+            <product id="p2" przecena="5%" ilosc="5">
+                <name>SZCZOTECZKI DO ZEBOW</name>
+                <brand>COLGATE</brand>
+                <price>12.99</price>
+            </product>
+
+            <product id="p3" przecena="50%" ilosc="2">
+                <name>ZEL DO MYCIA 3w1</name>
+                <brand>DOVE</brand>
+                <price>9.99</price>
+            </product>
+
+            <product id="p4" przecena="0%" ilosc="1">
+                <name>PASTA DO BUTOW</name>
+                <brand>NIKE</brand>
+                <price>24.99</price>
+            </product>
+
+            <product id="p5" przecena="2+1 gratis" ilosc="3">
+                <name>SER</name>
+                <brand>SERENADA</brand>
+                <price>4.59</price>
+            </product>
+        </KOSZYK_ID>
+
+        <deliveryAddress id="d1">
+            <street>Tenisowa 3/5</street>
+            <city>Szczecin</city>
+            <zipCode>12345565</zipCode>
+            <country europa="tak">Polska</country>
+        </deliveryAddress>
+
+        <customerInfo>
+            <customerID>KLIENT-001</customerID>
+            <name>Jan Paweł</name>
+            <email>janpawel@watykan.pl</email>
+            <phone>10391028391284</phone>
+        </customerInfo>
+    </KOSZYK_INFO>
+
+    <orderNotes>
+        <![CDATA[
+            PROSZE O PREDKA DOSTAWE. 
+            DAM NAPIWEK 200 ZL DZIEKUJE 
+            POZDRAWIAM
+        ]]>
+    </orderNotes>
+
+    <KOSZYK_INFO data="2023-06-13" czas_zakupu="03:23" klient="DUDUŚ IRENA KOT" dwa_imiona="tak">
+        <KOSZYK_ID id="12345" status="niezapłacony" currency="miau">
+            <product id="p1" przecena="0%" ilosc="10">
+                <name>KARMA DLA KOTA</name>
+                <brand>PEDIGREE</brand>
+                <price>9.99</price>
+            </product>
+
+            <product id="p2" przecena="0%" ilosc="1">
+                <name>KUWETA DLA KOTA</name>
+                <brand>AUCHAN</brand>
+                <price>67.99</price>
+            </product>
+
+            <product id="p3" przecena="100%" ilosc="10">
+                <name>KABANOSY DLA KOTA</name>
+                <brand>PEDIGREE</brand>
+                <price>4.99</price>
+            </product>
+
+            <product id="p4" przecena="6%" ilosc="2">
+                <name>ŻWIREK</name>
+                <brand>duduś firma</brand>
+                <price>34.99</price>
+            </product>
+
+            <product id="p5" przecena="kuponik" ilosc="1">
+                <name>ZABAWKA</name>
+                <brand>duduś company</brand>
+                <price>1000.01</price>
+            </product>
+        </KOSZYK_ID>
+
+        <KOSZYK_ID id="12345" status="zapłacony" currency="miau">
+            <product id="p1" przecena="0%" ilosc="3 tony">
+                <name>miał</name>
+                <brand>kopalnia szczebrzerzyce</brand>
+                <price>100/tone</price>
+            </product>
+
+            <product id="p2" przecena="2%" ilosc="1">
+                <name>KUBEK</name>
+                <brand>gryftec</brand>
+                <price>8.99</price>
+            </product>
+
+            <product id="p3" przecena="0%" ilosc="2">
+                <name>ŚWIECA ZAPACHOWA</name>
+                <brand>IKEA</brand>
+                <price>7.99</price>
+            </product>
+
+            <product id="p4" przecena="15%" ilosc="1">
+                <name>POPIELNICZKA</name>
+                <brand>IQOS</brand>
+                <price>100</price>
+            </product>
+
+            <product id="p5" przecena="koszt firmy" ilosc="10">
+                <name>MANICURE</name>
+                <brand>PAWLUS</brand>
+                <price>0</price>
+            </product>
+
+            <product id="p6" przecena="0%" ilosc="1">
+                <name>KIEROWNICA</name>
+                <brand>BMW</brand>
+                <price>1300</price>
+            </product>
+
+            <product id="p7" przecena="5%" ilosc="100">
+                <name>KETCHUP</name>
+                <brand>WINIARY</brand>
+                <price>1.99</price>
+            </product>
+
+            <product id="p8" przecena="35%" ilosc="15">
+                <name>ŻARÓWKA</name>
+                <brand>OSRAM</brand>
+                <price>3.99</price>
+            </product>
+        </KOSZYK_ID>
+
+        <deliveryAddress id="d2">
+            <street>Aleja Gwiazd</street>
+            <city>Hollywood</city>
+            <zipCode>91283719238</zipCode>
+            <country europa="nie">USA</country>
+        </deliveryAddress>
+
+        <customerInfo>
+            <customerID>KLIENT-002</customerID>
+            <email>dupson@stol.com</email>
+            <phone>666</phone>
+        </customerInfo>
+    </KOSZYK_INFO>
+</KOSZYK_SKLEPOWY>
+
+<!-- INFORMACJE -->
+<!--     O      -->
+<!--   AUTORZE  -->
+<!--            -->
+<!-- DATA: 26.01.23 -->
+<!-- GODZINA: 19:13 -->
+<!-- IMIE: SZYMON PAWEŁ -->
+<!-- NAZWISKO: WIĘZOWSKI -->

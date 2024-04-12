@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Opis strony">
+    <meta name="author" content="Szymon Wiezowski">
+    <meta name="keyword" content="html, js, sklep">
+    <title>SKLEP INTERNETOWY</title>
+    <script src="script_03_02.js" defer></script>
+</head>
+<body>
+
+    <h1>FORMULARZ</h1>
+
+    <form id="orderForm">
+        <label for="productSelect">produkt:</label>
+        <select id="productSelect">
+            <option value="PROD_01">PROD_01</option>
+            <option value="PROD_02">PROD_02</option>
+            <option value="PROD_03" disabled>PROD_03 (niedostępny)</option>
+            <option value="PROD_04">PROD_04</option>
+        </select>
+
+        <br>
+
+        <label for="quantityInput">Ilość:</label>
+        <input type="number" id="quantityInput" min="1" step="1">
+
+        <br>
+
+        <div id="totalAmount">Suma PLN: 0.00</div>
+
+        <br>
+
+        <button type="button" onclick="calculateOrder()">Oblicz</button>
+        <button type="button" onclick="placeOrder()">Zamawiam</button>
+
+        <br>
+
+        <span id="orderSummary"></span>
+    </form>
+</body>
+</html>
